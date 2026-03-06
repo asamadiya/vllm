@@ -29,7 +29,7 @@ ZMQ sockets.
 │  │  FastAPI      │  │  Input       │  │  Output Processor           │   │
 │  │  Router       │  │  Processor   │  │  (Detokenization, Streaming)│   │
 │  │  (OpenAI API) │  │  (Tokenize,  │  │                             │   │
-│  │              │  │   MM Load)   │  │                             │   │
+│  │              │  │   MM data)   │  │                             │   │
 │  └──────┬───────┘  └──────┬───────┘  └──────────────┬──────────────┘   │
 └─────────┼─────────────────┼──────────────────────────┼──────────────────┘
           │                 │                          │
@@ -857,8 +857,8 @@ On startup, vLLM profiles GPU memory to determine how many KV cache blocks
 can fit. The formula:
 
 ```
-available_memory = total_gpu_memory × gpu_memory_utilization - model_weights - activation_memory
-num_blocks = available_memory / (block_size × num_layers × 2 × num_kv_heads × head_size × dtype_size)
+available_memory = total_gpu_memory * gpu_memory_utilization - model_weights - activation_memory
+num_blocks = available_memory / (block_size * num_layers * 2(K+V) * num_kv_heads * head_size * dtype_size)
 ```
 
 The `gpu_memory_utilization` parameter (default 0.9) controls the trade-off
