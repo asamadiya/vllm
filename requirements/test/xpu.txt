@@ -248,7 +248,7 @@ llvmlite==0.47.0
     # via numba
 lm-eval==0.4.11
     # via -r requirements/test/xpu.in
-lxml==6.0.2
+lxml==6.1.0
     # via
     #   blobfile
     #   gpt-oss
@@ -714,7 +714,7 @@ umf==1.0.3
     # via
     #   intel-cmplr-lib-ur
     #   torch
-urllib3==2.6.3
+urllib3==2.7.0
     # via
     #   blobfile
     #   docker

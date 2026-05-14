@@ -484,7 +484,7 @@ logistro==2.0.1
     #   kaleido
 loguru==0.7.3
     # via compressed-tensors
-lxml==6.0.2
+lxml==6.1.0
     # via
     #   blobfile
     #   gpt-oss
@@ -557,7 +557,7 @@ networkx==3.6.1
     #   torch
 ninja==1.13.0
     # via -r requirements/test/../common.txt
-nltk==3.9.3
+nltk==3.9.4
     # via rouge-score
 num2words==0.5.14
     # via -r requirements/test/rocm.in
@@ -1308,7 +1308,7 @@ tzdata==2025.3
     # via arrow
 uri-template==1.3.0
     # via jsonschema
-urllib3==2.6.3
+urllib3==2.7.0
     # via
     #   blobfile
     #   botocore
